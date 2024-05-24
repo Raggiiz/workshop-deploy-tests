@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "workshop-2305"
-  }
+  },
+  "targets": {
+    "workshop-2305": {
+      "hosting": {
+        "dev": [
+          "workshop-2305-dev"
+        ],
+        "prod": [
+          "workshop-2305"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -1,4 +1,4 @@
-name: Deploy to Firebase
+name: Deploy to Dev
 
 on:
   push:
@@ -29,6 +29,6 @@ jobs:
     
       - name: Deploy to Firebase
         run: npm install -g firebase-tools@10.9.2
-      - run: firebase deploy --token "$FIREBASE_TOKEN"
+      - run: firebase deploy --only hosting:dev --site workshop-2305-dev --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
